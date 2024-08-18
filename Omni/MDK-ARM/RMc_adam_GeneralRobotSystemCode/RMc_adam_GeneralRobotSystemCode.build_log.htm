@@ -1,0 +1,666 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.35.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: R YJ, Adam, LIC=PE7DL-0VSD0-9UH4U-SQYP5-N30TQ-QZM0N
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.35.0.2
+Toolchain Path:  D:\Keil5 535\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.35.0.2
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      CMSIS_AGDI.dll V1.33.0.0
+Dialog DLL:      TCM.DLL V1.53.0.0
+ 
+<h2>Project:</h2>
+C:\Users\RYJ\Desktop\RM24-special-Omni\MDK-ARM\RMc_adam_GeneralRobotSystemCode.uvprojx
+Project File Date:  08/18/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\Keil5 535\ARM\ARMCC\Bin'
+Rebuild target 'RMc_adam_GeneralRobotSystemCode'
+compiling crc.c...
+compiling dma.c...
+compiling i2c.c...
+compiling tim.c...
+compiling usbd_desc.c...
+compiling gpio.c...
+compiling spi.c...
+compiling usb_device.c...
+compiling usbd_conf.c...
+compiling iwdg.c...
+compiling can.c...
+compiling pid.c...
+compiling usart.c...
+compiling MahonyAHRS.c...
+compiling RampFunc.c...
+compiling main.c...
+../Applications/Hardware/IMU_updata.h(63): warning:  #1295-D: Deprecated declaration process_IMU_data - give arg types
+  void process_IMU_data();
+../Applications/Software/referee_handle_pack.h(730): warning:  #1295-D: Deprecated declaration Required_Data - give arg types
+  void Required_Data();
+../Applications/Software/referee_handle_pack.h(731): warning:  #1295-D: Deprecated declaration Cap_Required_Data - give arg types
+  void Cap_Required_Data(); 
+../Applications/Software/referee_handle_pack.h(732): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Applications/Software/NUC_communication.h(66): warning:  #1295-D: Deprecated declaration Test_communcation_0128 - give arg types
+  void Test_communcation_0128();
+../Applications/Software/shoot.h(76): warning:  #1295-D: Deprecated declaration shoot_speed_limit - give arg types
+  void shoot_speed_limit();//
+../Applications/Software/shoot.h(80): warning:  #1295-D: Deprecated declaration shoot_trigger_online - give arg types
+  void shoot_trigger_online();//PC操作
+../Applications/Software/shoot.h(86): warning:  #1295-D: Deprecated declaration triger_clear_cnt - give arg types
+  void triger_clear_cnt();
+../Applications/Software/ui_default_Ungroup_0.h(12): warning:  #1295-D: Deprecated declaration _ui_init_default_Ungroup_0 - give arg types
+  void _ui_init_default_Ungroup_0();
+../Applications/Software/ui_default_Ungroup_0.h(13): warning:  #1295-D: Deprecated declaration _ui_update_default_Ungroup_0 - give arg types
+  void _ui_update_default_Ungroup_0();
+../Applications/Software/ui_default_Ungroup_0.h(14): warning:  #1295-D: Deprecated declaration _ui_remove_default_Ungroup_0 - give arg types
+  void _ui_remove_default_Ungroup_0();
+../Applications/Software/ui_default_Ungroup_1.h(12): warning:  #1295-D: Deprecated declaration _ui_init_default_Ungroup_1 - give arg types
+  void _ui_init_default_Ungroup_1();
+../Applications/Software/ui_default_Ungroup_1.h(13): warning:  #1295-D: Deprecated declaration _ui_update_default_Ungroup_1 - give arg types
+  void _ui_update_default_Ungroup_1();
+../Applications/Software/ui_default_Ungroup_1.h(14): warning:  #1295-D: Deprecated declaration _ui_remove_default_Ungroup_1 - give arg types
+  void _ui_remove_default_Ungroup_1();
+../Applications/Software/ui_default_Ungroup_2.h(12): warning:  #1295-D: Deprecated declaration _ui_init_default_Ungroup_2 - give arg types
+  void _ui_init_default_Ungroup_2();
+../Applications/Software/ui_default_Ungroup_2.h(13): warning:  #1295-D: Deprecated declaration _ui_update_default_Ungroup_2 - give arg types
+  void _ui_update_default_Ungroup_2();
+../Applications/Software/ui_default_Ungroup_2.h(14): warning:  #1295-D: Deprecated declaration _ui_remove_default_Ungroup_2 - give arg types
+  void _ui_remove_default_Ungroup_2();
+../Applications/Software/ui_default_Ungroup_3.h(12): warning:  #1295-D: Deprecated declaration _ui_init_default_Ungroup_3 - give arg types
+  void _ui_init_default_Ungroup_3();
+../Applications/Software/ui_default_Ungroup_3.h(13): warning:  #1295-D: Deprecated declaration _ui_update_default_Ungroup_3 - give arg types
+  void _ui_update_default_Ungroup_3();
+../Applications/Software/ui_default_Ungroup_3.h(14): warning:  #1295-D: Deprecated declaration _ui_remove_default_Ungroup_3 - give arg types
+  void _ui_remove_default_Ungroup_3();
+../Applications/Software/ui_default_Ungroup_4.h(18): warning:  #1295-D: Deprecated declaration _ui_init_default_Ungroup_4 - give arg types
+  void _ui_init_default_Ungroup_4();
+../Applications/Software/ui_default_Ungroup_4.h(19): warning:  #1295-D: Deprecated declaration _ui_update_default_Ungroup_4 - give arg types
+  void _ui_update_default_Ungroup_4();
+../Applications/Software/ui_default_Ungroup_4.h(20): warning:  #1295-D: Deprecated declaration _ui_remove_default_Ungroup_4 - give arg types
+  void _ui_remove_default_Ungroup_4();
+../Applications/Software/ui_default_Ungroup_5.h(16): warning:  #1295-D: Deprecated declaration _ui_init_default_Ungroup_5 - give arg types
+  void _ui_init_default_Ungroup_5();
+../Applications/Software/ui_default_Ungroup_5.h(17): warning:  #1295-D: Deprecated declaration _ui_update_default_Ungroup_5 - give arg types
+  void _ui_update_default_Ungroup_5();
+../Applications/Software/ui_default_Ungroup_5.h(18): warning:  #1295-D: Deprecated declaration _ui_remove_default_Ungroup_5 - give arg types
+  void _ui_remove_default_Ungroup_5();
+../Applications/Software/ui.h(20): warning:  #1295-D: Deprecated declaration ui_init - give arg types
+  void ui_init();
+../Applications/Software/ui.h(21): warning:  #1295-D: Deprecated declaration ui_updata - give arg types
+  void ui_updata();
+../Applications/Software/ui.h(23): warning:  #1295-D: Deprecated declaration char_change - give arg types
+  void char_change();
+../Applications/Software/ui.h(26): warning:  #1295-D: Deprecated declaration ui_chassisline - give arg types
+  void ui_chassisline();
+../Applications/Software/ui.h(27): warning:  #1295-D: Deprecated declaration ui_WarningLight - give arg types
+  void ui_WarningLight();
+../Applications/Software/ui.h(28): warning:  #1295-D: Deprecated declaration ui_Spin - give arg types
+  void ui_Spin();
+../Src/main.c(164): warning:  #223-D: function "referee_usart_task_init" declared implicitly
+    referee_usart_task_init(); // 裁判系统解算
+../Src/main.c: 33 warnings, 0 errors
+compiling freertos.c...
+../Applications/Hardware/IMU_updata.h(63): warning:  #1295-D: Deprecated declaration process_IMU_data - give arg types
+  void process_IMU_data();
+../Applications/Software/referee_handle_pack.h(730): warning:  #1295-D: Deprecated declaration Required_Data - give arg types
+  void Required_Data();
+../Applications/Software/referee_handle_pack.h(731): warning:  #1295-D: Deprecated declaration Cap_Required_Data - give arg types
+  void Cap_Required_Data(); 
+../Applications/Software/referee_handle_pack.h(732): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Applications/Software/shoot.h(76): warning:  #1295-D: Deprecated declaration shoot_speed_limit - give arg types
+  void shoot_speed_limit();//
+../Applications/Software/shoot.h(80): warning:  #1295-D: Deprecated declaration shoot_trigger_online - give arg types
+  void shoot_trigger_online();//PC操作
+../Applications/Software/shoot.h(86): warning:  #1295-D: Deprecated declaration triger_clear_cnt - give arg types
+  void triger_clear_cnt();
+../Applications/Software/NUC_communication.h(66): warning:  #1295-D: Deprecated declaration Test_communcation_0128 - give arg types
+  void Test_communcation_0128();
+../Applications/Software/ui_default_Ungroup_0.h(12): warning:  #1295-D: Deprecated declaration _ui_init_default_Ungroup_0 - give arg types
+  void _ui_init_default_Ungroup_0();
+../Applications/Software/ui_default_Ungroup_0.h(13): warning:  #1295-D: Deprecated declaration _ui_update_default_Ungroup_0 - give arg types
+  void _ui_update_default_Ungroup_0();
+../Applications/Software/ui_default_Ungroup_0.h(14): warning:  #1295-D: Deprecated declaration _ui_remove_default_Ungroup_0 - give arg types
+  void _ui_remove_default_Ungroup_0();
+../Applications/Software/ui_default_Ungroup_1.h(12): warning:  #1295-D: Deprecated declaration _ui_init_default_Ungroup_1 - give arg types
+  void _ui_init_default_Ungroup_1();
+../Applications/Software/ui_default_Ungroup_1.h(13): warning:  #1295-D: Deprecated declaration _ui_update_default_Ungroup_1 - give arg types
+  void _ui_update_default_Ungroup_1();
+../Applications/Software/ui_default_Ungroup_1.h(14): warning:  #1295-D: Deprecated declaration _ui_remove_default_Ungroup_1 - give arg types
+  void _ui_remove_default_Ungroup_1();
+../Applications/Software/ui_default_Ungroup_2.h(12): warning:  #1295-D: Deprecated declaration _ui_init_default_Ungroup_2 - give arg types
+  void _ui_init_default_Ungroup_2();
+../Applications/Software/ui_default_Ungroup_2.h(13): warning:  #1295-D: Deprecated declaration _ui_update_default_Ungroup_2 - give arg types
+  void _ui_update_default_Ungroup_2();
+../Applications/Software/ui_default_Ungroup_2.h(14): warning:  #1295-D: Deprecated declaration _ui_remove_default_Ungroup_2 - give arg types
+  void _ui_remove_default_Ungroup_2();
+../Applications/Software/ui_default_Ungroup_3.h(12): warning:  #1295-D: Deprecated declaration _ui_init_default_Ungroup_3 - give arg types
+  void _ui_init_default_Ungroup_3();
+../Applications/Software/ui_default_Ungroup_3.h(13): warning:  #1295-D: Deprecated declaration _ui_update_default_Ungroup_3 - give arg types
+  void _ui_update_default_Ungroup_3();
+../Applications/Software/ui_default_Ungroup_3.h(14): warning:  #1295-D: Deprecated declaration _ui_remove_default_Ungroup_3 - give arg types
+  void _ui_remove_default_Ungroup_3();
+../Applications/Software/ui_default_Ungroup_4.h(18): warning:  #1295-D: Deprecated declaration _ui_init_default_Ungroup_4 - give arg types
+  void _ui_init_default_Ungroup_4();
+../Applications/Software/ui_default_Ungroup_4.h(19): warning:  #1295-D: Deprecated declaration _ui_update_default_Ungroup_4 - give arg types
+  void _ui_update_default_Ungroup_4();
+../Applications/Software/ui_default_Ungroup_4.h(20): warning:  #1295-D: Deprecated declaration _ui_remove_default_Ungroup_4 - give arg types
+  void _ui_remove_default_Ungroup_4();
+../Applications/Software/ui_default_Ungroup_5.h(16): warning:  #1295-D: Deprecated declaration _ui_init_default_Ungroup_5 - give arg types
+  void _ui_init_default_Ungroup_5();
+../Applications/Software/ui_default_Ungroup_5.h(17): warning:  #1295-D: Deprecated declaration _ui_update_default_Ungroup_5 - give arg types
+  void _ui_update_default_Ungroup_5();
+../Applications/Software/ui_default_Ungroup_5.h(18): warning:  #1295-D: Deprecated declaration _ui_remove_default_Ungroup_5 - give arg types
+  void _ui_remove_default_Ungroup_5();
+../Applications/Software/ui.h(20): warning:  #1295-D: Deprecated declaration ui_init - give arg types
+  void ui_init();
+../Applications/Software/ui.h(21): warning:  #1295-D: Deprecated declaration ui_updata - give arg types
+  void ui_updata();
+../Applications/Software/ui.h(23): warning:  #1295-D: Deprecated declaration char_change - give arg types
+  void char_change();
+../Applications/Software/ui.h(26): warning:  #1295-D: Deprecated declaration ui_chassisline - give arg types
+  void ui_chassisline();
+../Applications/Software/ui.h(27): warning:  #1295-D: Deprecated declaration ui_WarningLight - give arg types
+  void ui_WarningLight();
+../Applications/Software/ui.h(28): warning:  #1295-D: Deprecated declaration ui_Spin - give arg types
+  void ui_Spin();
+../Applications/Software/vofa.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Src/freertos.c: 33 warnings, 0 errors
+compiling wwdg.c...
+compiling stm32f4xx_it.c...
+compiling stm32f4xx_hal_timebase_tim.c...
+compiling Kalman_Filter_c.c...
+../Applications/Software/referee_handle_pack.h(730): warning:  #1295-D: Deprecated declaration Required_Data - give arg types
+  void Required_Data();
+../Applications/Software/referee_handle_pack.h(731): warning:  #1295-D: Deprecated declaration Cap_Required_Data - give arg types
+  void Cap_Required_Data(); 
+../Applications/Software/referee_handle_pack.h(732): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Applications/Software/NUC_communication.h(66): warning:  #1295-D: Deprecated declaration Test_communcation_0128 - give arg types
+  void Test_communcation_0128();
+..\Algorithm\Kalman_Filter_c.c: 4 warnings, 0 errors
+compiling AHRS_middleware.c...
+compiling stm32f4xx_hal_msp.c...
+compiling DBUS_remote_control.c...
+../Applications/Software/referee_handle_pack.h(730): warning:  #1295-D: Deprecated declaration Required_Data - give arg types
+  void Required_Data();
+../Applications/Software/referee_handle_pack.h(731): warning:  #1295-D: Deprecated declaration Cap_Required_Data - give arg types
+  void Cap_Required_Data(); 
+../Applications/Software/referee_handle_pack.h(732): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Applications\Hardware\DBUS_remote_control.c: 3 warnings, 0 errors
+compiling UART_data_transmit.c...
+../Applications/Software/referee_handle_pack.h(730): warning:  #1295-D: Deprecated declaration Required_Data - give arg types
+  void Required_Data();
+../Applications/Software/referee_handle_pack.h(731): warning:  #1295-D: Deprecated declaration Cap_Required_Data - give arg types
+  void Cap_Required_Data(); 
+../Applications/Software/referee_handle_pack.h(732): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Applications\Hardware\UART_data_transmit.c: 3 warnings, 0 errors
+compiling CRC8_CRC16.c...
+../Applications/Software/referee_handle_pack.h(730): warning:  #1295-D: Deprecated declaration Required_Data - give arg types
+  void Required_Data();
+../Applications/Software/referee_handle_pack.h(731): warning:  #1295-D: Deprecated declaration Cap_Required_Data - give arg types
+  void Cap_Required_Data(); 
+../Applications/Software/referee_handle_pack.h(732): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Applications/Software/NUC_communication.h(66): warning:  #1295-D: Deprecated declaration Test_communcation_0128 - give arg types
+  void Test_communcation_0128();
+..\Algorithm\CRC8_CRC16.c: 4 warnings, 0 errors
+compiling usbd_cdc_if.c...
+compiling IMU_updata.c...
+..\Applications\Hardware\IMU_updata.h(63): warning:  #1295-D: Deprecated declaration process_IMU_data - give arg types
+  void process_IMU_data();
+..\Applications\Hardware\IMU_updata.c(144): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	IMU_data.gyro[0] += 0.00169377134;
+..\Applications\Hardware\IMU_updata.c(145): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	IMU_data.gyro[1] += 0.00817589462;
+..\Applications\Hardware\IMU_updata.c(146): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	IMU_data.gyro[2] -= 0.000124635975;
+..\Applications\Hardware\IMU_updata.c(175): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	IMU_data.AHRS.err_code = AHRS_update(IMU_data.AHRS.q, (float)(Get_sys_time_ms() - last_time) * 0.001,
+..\Applications\Hardware\IMU_updata.c(211): warning:  #186-D: pointless comparison of unsigned integer with zero
+  	if(ccr < 0)
+..\Applications\Hardware\IMU_updata.c(319): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			IMU_data.gyro[0] -= 0.007288707553;
+..\Applications\Hardware\IMU_updata.c(321): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			IMU_data.gyro[2] -= 0.90244110504;	
+..\Applications\Hardware\IMU_updata.c: 8 warnings, 0 errors
+compiling PWM_control.c...
+compiling fifo.c...
+compiling global_status.c...
+compiling CAN_receive&send.c...
+..\Applications\Hardware\IMU_updata.h(63): warning:  #1295-D: Deprecated declaration process_IMU_data - give arg types
+  void process_IMU_data();
+..\Applications\Hardware\CAN_receive&send.c(250): warning:  #223-D: function "memset" declared implicitly
+    memset(can_send_data,0,8);
+..\Applications\Hardware\CAN_receive&send.c(292): warning:  #223-D: function "memset" declared implicitly
+    memset(can_send_data,0,8);
+..\Applications\Hardware\CAN_receive&send.c(375): warning:  #223-D: function "abs" declared implicitly
+    uint32_t mul = abs((int)angle_0) / 180;
+..\Applications\Hardware\CAN_receive&send.c: 4 warnings, 0 errors
+compiling Laser.c...
+compiling GPIO_input_EXTI.c...
+compiling LED_control.c...
+compiling NUC_communication.c...
+..\Applications\Software\referee_handle_pack.h(730): warning:  #1295-D: Deprecated declaration Required_Data - give arg types
+  void Required_Data();
+..\Applications\Software\referee_handle_pack.h(731): warning:  #1295-D: Deprecated declaration Cap_Required_Data - give arg types
+  void Cap_Required_Data(); 
+..\Applications\Software\referee_handle_pack.h(732): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Applications\Software\NUC_communication.h(66): warning:  #1295-D: Deprecated declaration Test_communcation_0128 - give arg types
+  void Test_communcation_0128();
+../Applications/Hardware/IMU_updata.h(63): warning:  #1295-D: Deprecated declaration process_IMU_data - give arg types
+  void process_IMU_data();
+..\Applications\Software\NUC_communication.c: 5 warnings, 0 errors
+compiling Stm32_time.c...
+compiling cap_ctl.c...
+compiling gimbal.c...
+../Applications/Hardware/IMU_updata.h(63): warning:  #1295-D: Deprecated declaration process_IMU_data - give arg types
+  void process_IMU_data();
+..\Applications\Software\referee_handle_pack.h(730): warning:  #1295-D: Deprecated declaration Required_Data - give arg types
+  void Required_Data();
+..\Applications\Software\referee_handle_pack.h(731): warning:  #1295-D: Deprecated declaration Cap_Required_Data - give arg types
+  void Cap_Required_Data(); 
+..\Applications\Software\referee_handle_pack.h(732): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Applications\Software\NUC_communication.h(66): warning:  #1295-D: Deprecated declaration Test_communcation_0128 - give arg types
+  void Test_communcation_0128();
+..\Applications\Software\gimbal.c(305): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      slope = rad2degree(IMU_pitch) - LOCATION_pitch - 48.5;
+..\Applications\Software\gimbal.c(320): warning:  #1-D: last line of file ends without a newline
+  }
+..\Applications\Software\gimbal.c: 7 warnings, 0 errors
+compiling USB_VirCom.c...
+../Applications/Software/referee_handle_pack.h(730): warning:  #1295-D: Deprecated declaration Required_Data - give arg types
+  void Required_Data();
+../Applications/Software/referee_handle_pack.h(731): warning:  #1295-D: Deprecated declaration Cap_Required_Data - give arg types
+  void Cap_Required_Data(); 
+../Applications/Software/referee_handle_pack.h(732): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Applications/Software/NUC_communication.h(66): warning:  #1295-D: Deprecated declaration Test_communcation_0128 - give arg types
+  void Test_communcation_0128();
+..\Applications\Hardware\USB_VirCom.c(27): warning:  #177-D: variable "sum"  was declared but never referenced
+  	uint16_t sum;
+..\Applications\Hardware\USB_VirCom.c: 5 warnings, 0 errors
+compiling GPIO_output.c...
+compiling referee_handle_pack.c...
+..\Applications\Software\referee_handle_pack.h(730): warning:  #1295-D: Deprecated declaration Required_Data - give arg types
+  void Required_Data();
+..\Applications\Software\referee_handle_pack.h(731): warning:  #1295-D: Deprecated declaration Cap_Required_Data - give arg types
+  void Cap_Required_Data(); 
+..\Applications\Software\referee_handle_pack.h(732): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Applications\Software\referee_handle_pack.c: 3 warnings, 0 errors
+compiling Error_detect.c...
+..\Applications\Software\referee_handle_pack.h(730): warning:  #1295-D: Deprecated declaration Required_Data - give arg types
+  void Required_Data();
+..\Applications\Software\referee_handle_pack.h(731): warning:  #1295-D: Deprecated declaration Cap_Required_Data - give arg types
+  void Cap_Required_Data(); 
+..\Applications\Software\referee_handle_pack.h(732): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Applications\Software\shoot.h(76): warning:  #1295-D: Deprecated declaration shoot_speed_limit - give arg types
+  void shoot_speed_limit();//
+..\Applications\Software\shoot.h(80): warning:  #1295-D: Deprecated declaration shoot_trigger_online - give arg types
+  void shoot_trigger_online();//PC操作
+..\Applications\Software\shoot.h(86): warning:  #1295-D: Deprecated declaration triger_clear_cnt - give arg types
+  void triger_clear_cnt();
+..\Applications\Software\Error_detect.c: 6 warnings, 0 errors
+compiling shoot.c...
+..\Applications\Software\shoot.h(76): warning:  #1295-D: Deprecated declaration shoot_speed_limit - give arg types
+  void shoot_speed_limit();//
+..\Applications\Software\shoot.h(80): warning:  #1295-D: Deprecated declaration shoot_trigger_online - give arg types
+  void shoot_trigger_online();//PC操作
+..\Applications\Software\shoot.h(86): warning:  #1295-D: Deprecated declaration triger_clear_cnt - give arg types
+  void triger_clear_cnt();
+..\Applications\Software\referee_handle_pack.h(730): warning:  #1295-D: Deprecated declaration Required_Data - give arg types
+  void Required_Data();
+..\Applications\Software\referee_handle_pack.h(731): warning:  #1295-D: Deprecated declaration Cap_Required_Data - give arg types
+  void Cap_Required_Data(); 
+..\Applications\Software\referee_handle_pack.h(732): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Applications\Software\NUC_communication.h(66): warning:  #1295-D: Deprecated declaration Test_communcation_0128 - give arg types
+  void Test_communcation_0128();
+..\Applications\Software\shoot.c(89): warning:  #550-D: variable "last_status"  was set but never used
+  	static enum trigger_status_e last_status = LOCATIONS;
+..\Applications\Software\shoot.c: 8 warnings, 0 errors
+compiling chassis_move.c...
+..\Applications\Software\referee_handle_pack.h(730): warning:  #1295-D: Deprecated declaration Required_Data - give arg types
+  void Required_Data();
+..\Applications\Software\referee_handle_pack.h(731): warning:  #1295-D: Deprecated declaration Cap_Required_Data - give arg types
+  void Cap_Required_Data(); 
+..\Applications\Software\referee_handle_pack.h(732): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Applications/Hardware/IMU_updata.h(63): warning:  #1295-D: Deprecated declaration process_IMU_data - give arg types
+  void process_IMU_data();
+..\Applications\Software\chassis_move.c(177): warning:  #188-D: enumerated type mixed with another type
+  		now_p += fabs(current[i] * toque_coefficient * get_motor_data(i).speed_rpm +
+..\Applications\Software\chassis_move.c(178): warning:  #188-D: enumerated type mixed with another type
+  					  k2 * get_motor_data(i).speed_rpm * get_motor_data(i).speed_rpm +
+..\Applications\Software\chassis_move.c(178): warning:  #188-D: enumerated type mixed with another type
+  					  k2 * get_motor_data(i).speed_rpm * get_motor_data(i).speed_rpm +
+..\Applications\Software\chassis_move.c(571): warning:  #940-D: missing return statement at end of non-void function "fly_speed_up" 
+  }
+..\Applications\Software\chassis_move.c: 8 warnings, 0 errors
+compiling control_setting.c...
+../Applications/Hardware/IMU_updata.h(63): warning:  #1295-D: Deprecated declaration process_IMU_data - give arg types
+  void process_IMU_data();
+..\Applications\Software\referee_handle_pack.h(730): warning:  #1295-D: Deprecated declaration Required_Data - give arg types
+  void Required_Data();
+..\Applications\Software\referee_handle_pack.h(731): warning:  #1295-D: Deprecated declaration Cap_Required_Data - give arg types
+  void Cap_Required_Data(); 
+..\Applications\Software\referee_handle_pack.h(732): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Applications\Software\ui_default_Ungroup_0.h(12): warning:  #1295-D: Deprecated declaration _ui_init_default_Ungroup_0 - give arg types
+  void _ui_init_default_Ungroup_0();
+..\Applications\Software\ui_default_Ungroup_0.h(13): warning:  #1295-D: Deprecated declaration _ui_update_default_Ungroup_0 - give arg types
+  void _ui_update_default_Ungroup_0();
+..\Applications\Software\ui_default_Ungroup_0.h(14): warning:  #1295-D: Deprecated declaration _ui_remove_default_Ungroup_0 - give arg types
+  void _ui_remove_default_Ungroup_0();
+..\Applications\Software\ui_default_Ungroup_1.h(12): warning:  #1295-D: Deprecated declaration _ui_init_default_Ungroup_1 - give arg types
+  void _ui_init_default_Ungroup_1();
+..\Applications\Software\ui_default_Ungroup_1.h(13): warning:  #1295-D: Deprecated declaration _ui_update_default_Ungroup_1 - give arg types
+  void _ui_update_default_Ungroup_1();
+..\Applications\Software\ui_default_Ungroup_1.h(14): warning:  #1295-D: Deprecated declaration _ui_remove_default_Ungroup_1 - give arg types
+  void _ui_remove_default_Ungroup_1();
+..\Applications\Software\ui_default_Ungroup_2.h(12): warning:  #1295-D: Deprecated declaration _ui_init_default_Ungroup_2 - give arg types
+  void _ui_init_default_Ungroup_2();
+..\Applications\Software\ui_default_Ungroup_2.h(13): warning:  #1295-D: Deprecated declaration _ui_update_default_Ungroup_2 - give arg types
+  void _ui_update_default_Ungroup_2();
+..\Applications\Software\ui_default_Ungroup_2.h(14): warning:  #1295-D: Deprecated declaration _ui_remove_default_Ungroup_2 - give arg types
+  void _ui_remove_default_Ungroup_2();
+..\Applications\Software\ui_default_Ungroup_3.h(12): warning:  #1295-D: Deprecated declaration _ui_init_default_Ungroup_3 - give arg types
+  void _ui_init_default_Ungroup_3();
+..\Applications\Software\ui_default_Ungroup_3.h(13): warning:  #1295-D: Deprecated declaration _ui_update_default_Ungroup_3 - give arg types
+  void _ui_update_default_Ungroup_3();
+..\Applications\Software\ui_default_Ungroup_3.h(14): warning:  #1295-D: Deprecated declaration _ui_remove_default_Ungroup_3 - give arg types
+  void _ui_remove_default_Ungroup_3();
+..\Applications\Software\ui_default_Ungroup_4.h(18): warning:  #1295-D: Deprecated declaration _ui_init_default_Ungroup_4 - give arg types
+  void _ui_init_default_Ungroup_4();
+..\Applications\Software\ui_default_Ungroup_4.h(19): warning:  #1295-D: Deprecated declaration _ui_update_default_Ungroup_4 - give arg types
+  void _ui_update_default_Ungroup_4();
+..\Applications\Software\ui_default_Ungroup_4.h(20): warning:  #1295-D: Deprecated declaration _ui_remove_default_Ungroup_4 - give arg types
+  void _ui_remove_default_Ungroup_4();
+..\Applications\Software\ui_default_Ungroup_5.h(16): warning:  #1295-D: Deprecated declaration _ui_init_default_Ungroup_5 - give arg types
+  void _ui_init_default_Ungroup_5();
+..\Applications\Software\ui_default_Ungroup_5.h(17): warning:  #1295-D: Deprecated declaration _ui_update_default_Ungroup_5 - give arg types
+  void _ui_update_default_Ungroup_5();
+..\Applications\Software\ui_default_Ungroup_5.h(18): warning:  #1295-D: Deprecated declaration _ui_remove_default_Ungroup_5 - give arg types
+  void _ui_remove_default_Ungroup_5();
+..\Applications\Software\ui.h(20): warning:  #1295-D: Deprecated declaration ui_init - give arg types
+  void ui_init();
+..\Applications\Software\ui.h(21): warning:  #1295-D: Deprecated declaration ui_updata - give arg types
+  void ui_updata();
+..\Applications\Software\ui.h(23): warning:  #1295-D: Deprecated declaration char_change - give arg types
+  void char_change();
+..\Applications\Software\ui.h(26): warning:  #1295-D: Deprecated declaration ui_chassisline - give arg types
+  void ui_chassisline();
+..\Applications\Software\ui.h(27): warning:  #1295-D: Deprecated declaration ui_WarningLight - give arg types
+  void ui_WarningLight();
+..\Applications\Software\ui.h(28): warning:  #1295-D: Deprecated declaration ui_Spin - give arg types
+  void ui_Spin();
+..\Applications\Software\gimbal.h(21): warning:  #47-D: incompatible redefinition of macro "PI"  (declared at line 44 of "../Algorithm/AHRS_MiddleWare.h")
+  #define PI 3.1415926f
+..\Applications\Software\shoot.h(76): warning:  #1295-D: Deprecated declaration shoot_speed_limit - give arg types
+  void shoot_speed_limit();//
+..\Applications\Software\shoot.h(80): warning:  #1295-D: Deprecated declaration shoot_trigger_online - give arg types
+  void shoot_trigger_online();//PC操作
+..\Applications\Software\shoot.h(86): warning:  #1295-D: Deprecated declaration triger_clear_cnt - give arg types
+  void triger_clear_cnt();
+..\Applications\Software\NUC_communication.h(66): warning:  #1295-D: Deprecated declaration Test_communcation_0128 - give arg types
+  void Test_communcation_0128();
+..\Applications\Software\control_setting.c(304): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+             Global.input.y+=0.04;
+..\Applications\Software\control_setting.c(305): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+            if(Global.input.y>=3.0)
+..\Applications\Software\control_setting.c(311): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					if (Global.input.y < 0.5)
+..\Applications\Software\control_setting.c(313): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+            if (Global.input.y > 0.5&&Global.input.y < 0.8)
+..\Applications\Software\control_setting.c(313): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+            if (Global.input.y > 0.5&&Global.input.y < 0.8)
+..\Applications\Software\control_setting.c(315): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+            if (Global.input.y > 0.8&&Global.input.y < 1.6*KS)
+..\Applications\Software\control_setting.c(315): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+            if (Global.input.y > 0.8&&Global.input.y < 1.6*KS)
+..\Applications\Software\control_setting.c(317): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  					 if (Global.input.y > 1.6*KS)
+..\Applications\Software\control_setting.c(318): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+              Global.input.y = 1.6*KS;
+..\Applications\Software\control_setting.c: 42 warnings, 0 errors
+compiling ist8310driver.c...
+compiling vofa.c...
+..\Applications\Software\vofa.h(6): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Applications\Software\vofa.c(20): warning:  #1-D: last line of file ends without a newline
+  }
+..\Applications\Software\vofa.c: 2 warnings, 0 errors
+compiling ui_default_Ungroup_3.c...
+..\Applications\Software\ui_default_Ungroup_3.h(12): warning:  #1295-D: Deprecated declaration _ui_init_default_Ungroup_3 - give arg types
+  void _ui_init_default_Ungroup_3();
+..\Applications\Software\ui_default_Ungroup_3.h(13): warning:  #1295-D: Deprecated declaration _ui_update_default_Ungroup_3 - give arg types
+  void _ui_update_default_Ungroup_3();
+..\Applications\Software\ui_default_Ungroup_3.h(14): warning:  #1295-D: Deprecated declaration _ui_remove_default_Ungroup_3 - give arg types
+  void _ui_remove_default_Ungroup_3();
+..\Applications\Software\ui_default_Ungroup_3.c(47): warning:  #1-D: last line of file ends without a newline
+  }
+..\Applications\Software\ui_default_Ungroup_3.c: 4 warnings, 0 errors
+compiling ui_default_Ungroup_5.c...
+..\Applications\Software\ui_default_Ungroup_5.h(16): warning:  #1295-D: Deprecated declaration _ui_init_default_Ungroup_5 - give arg types
+  void _ui_init_default_Ungroup_5();
+..\Applications\Software\ui_default_Ungroup_5.h(17): warning:  #1295-D: Deprecated declaration _ui_update_default_Ungroup_5 - give arg types
+  void _ui_update_default_Ungroup_5();
+..\Applications\Software\ui_default_Ungroup_5.h(18): warning:  #1295-D: Deprecated declaration _ui_remove_default_Ungroup_5 - give arg types
+  void _ui_remove_default_Ungroup_5();
+..\Applications\Software\ui_default_Ungroup_5.c: 3 warnings, 0 errors
+compiling ui_default_Ungroup_1.c...
+..\Applications\Software\ui_default_Ungroup_1.h(12): warning:  #1295-D: Deprecated declaration _ui_init_default_Ungroup_1 - give arg types
+  void _ui_init_default_Ungroup_1();
+..\Applications\Software\ui_default_Ungroup_1.h(13): warning:  #1295-D: Deprecated declaration _ui_update_default_Ungroup_1 - give arg types
+  void _ui_update_default_Ungroup_1();
+..\Applications\Software\ui_default_Ungroup_1.h(14): warning:  #1295-D: Deprecated declaration _ui_remove_default_Ungroup_1 - give arg types
+  void _ui_remove_default_Ungroup_1();
+..\Applications\Software\ui_default_Ungroup_1.c(47): warning:  #1-D: last line of file ends without a newline
+  }
+..\Applications\Software\ui_default_Ungroup_1.c: 4 warnings, 0 errors
+assembling startup_stm32f407xx.s...
+compiling Stxxid-Data-Transmission.c...
+compiling ui_interface.c...
+compiling ui_default_Ungroup_0.c...
+..\Applications\Software\ui_default_Ungroup_0.h(12): warning:  #1295-D: Deprecated declaration _ui_init_default_Ungroup_0 - give arg types
+  void _ui_init_default_Ungroup_0();
+..\Applications\Software\ui_default_Ungroup_0.h(13): warning:  #1295-D: Deprecated declaration _ui_update_default_Ungroup_0 - give arg types
+  void _ui_update_default_Ungroup_0();
+..\Applications\Software\ui_default_Ungroup_0.h(14): warning:  #1295-D: Deprecated declaration _ui_remove_default_Ungroup_0 - give arg types
+  void _ui_remove_default_Ungroup_0();
+..\Applications\Software\ui_default_Ungroup_0.c(47): warning:  #1-D: last line of file ends without a newline
+  }
+..\Applications\Software\ui_default_Ungroup_0.c: 4 warnings, 0 errors
+compiling ui_default_Ungroup_2.c...
+..\Applications\Software\ui_default_Ungroup_2.h(12): warning:  #1295-D: Deprecated declaration _ui_init_default_Ungroup_2 - give arg types
+  void _ui_init_default_Ungroup_2();
+..\Applications\Software\ui_default_Ungroup_2.h(13): warning:  #1295-D: Deprecated declaration _ui_update_default_Ungroup_2 - give arg types
+  void _ui_update_default_Ungroup_2();
+..\Applications\Software\ui_default_Ungroup_2.h(14): warning:  #1295-D: Deprecated declaration _ui_remove_default_Ungroup_2 - give arg types
+  void _ui_remove_default_Ungroup_2();
+..\Applications\Software\ui_default_Ungroup_2.c(47): warning:  #1-D: last line of file ends without a newline
+  }
+..\Applications\Software\ui_default_Ungroup_2.c: 4 warnings, 0 errors
+compiling BMI088Middleware.c...
+compiling ist8310driver_middleware.c...
+compiling croutine.c...
+compiling list.c...
+compiling BMI088driver.c...
+compiling event_groups.c...
+compiling ui_default_Ungroup_4.c...
+..\Applications\Software\ui_default_Ungroup_4.h(18): warning:  #1295-D: Deprecated declaration _ui_init_default_Ungroup_4 - give arg types
+  void _ui_init_default_Ungroup_4();
+..\Applications\Software\ui_default_Ungroup_4.h(19): warning:  #1295-D: Deprecated declaration _ui_update_default_Ungroup_4 - give arg types
+  void _ui_update_default_Ungroup_4();
+..\Applications\Software\ui_default_Ungroup_4.h(20): warning:  #1295-D: Deprecated declaration _ui_remove_default_Ungroup_4 - give arg types
+  void _ui_remove_default_Ungroup_4();
+..\Applications\Software\ui_default_Ungroup_4.c: 3 warnings, 0 errors
+compiling stream_buffer.c...
+compiling queue.c...
+compiling ui.c...
+../Applications/Software/ui_default_Ungroup_0.h(12): warning:  #1295-D: Deprecated declaration _ui_init_default_Ungroup_0 - give arg types
+  void _ui_init_default_Ungroup_0();
+../Applications/Software/ui_default_Ungroup_0.h(13): warning:  #1295-D: Deprecated declaration _ui_update_default_Ungroup_0 - give arg types
+  void _ui_update_default_Ungroup_0();
+../Applications/Software/ui_default_Ungroup_0.h(14): warning:  #1295-D: Deprecated declaration _ui_remove_default_Ungroup_0 - give arg types
+  void _ui_remove_default_Ungroup_0();
+../Applications/Software/ui_default_Ungroup_1.h(12): warning:  #1295-D: Deprecated declaration _ui_init_default_Ungroup_1 - give arg types
+  void _ui_init_default_Ungroup_1();
+../Applications/Software/ui_default_Ungroup_1.h(13): warning:  #1295-D: Deprecated declaration _ui_update_default_Ungroup_1 - give arg types
+  void _ui_update_default_Ungroup_1();
+../Applications/Software/ui_default_Ungroup_1.h(14): warning:  #1295-D: Deprecated declaration _ui_remove_default_Ungroup_1 - give arg types
+  void _ui_remove_default_Ungroup_1();
+../Applications/Software/ui_default_Ungroup_2.h(12): warning:  #1295-D: Deprecated declaration _ui_init_default_Ungroup_2 - give arg types
+  void _ui_init_default_Ungroup_2();
+../Applications/Software/ui_default_Ungroup_2.h(13): warning:  #1295-D: Deprecated declaration _ui_update_default_Ungroup_2 - give arg types
+  void _ui_update_default_Ungroup_2();
+../Applications/Software/ui_default_Ungroup_2.h(14): warning:  #1295-D: Deprecated declaration _ui_remove_default_Ungroup_2 - give arg types
+  void _ui_remove_default_Ungroup_2();
+../Applications/Software/ui_default_Ungroup_3.h(12): warning:  #1295-D: Deprecated declaration _ui_init_default_Ungroup_3 - give arg types
+  void _ui_init_default_Ungroup_3();
+../Applications/Software/ui_default_Ungroup_3.h(13): warning:  #1295-D: Deprecated declaration _ui_update_default_Ungroup_3 - give arg types
+  void _ui_update_default_Ungroup_3();
+../Applications/Software/ui_default_Ungroup_3.h(14): warning:  #1295-D: Deprecated declaration _ui_remove_default_Ungroup_3 - give arg types
+  void _ui_remove_default_Ungroup_3();
+../Applications/Software/ui_default_Ungroup_4.h(18): warning:  #1295-D: Deprecated declaration _ui_init_default_Ungroup_4 - give arg types
+  void _ui_init_default_Ungroup_4();
+../Applications/Software/ui_default_Ungroup_4.h(19): warning:  #1295-D: Deprecated declaration _ui_update_default_Ungroup_4 - give arg types
+  void _ui_update_default_Ungroup_4();
+../Applications/Software/ui_default_Ungroup_4.h(20): warning:  #1295-D: Deprecated declaration _ui_remove_default_Ungroup_4 - give arg types
+  void _ui_remove_default_Ungroup_4();
+../Applications/Software/ui_default_Ungroup_5.h(16): warning:  #1295-D: Deprecated declaration _ui_init_default_Ungroup_5 - give arg types
+  void _ui_init_default_Ungroup_5();
+../Applications/Software/ui_default_Ungroup_5.h(17): warning:  #1295-D: Deprecated declaration _ui_update_default_Ungroup_5 - give arg types
+  void _ui_update_default_Ungroup_5();
+../Applications/Software/ui_default_Ungroup_5.h(18): warning:  #1295-D: Deprecated declaration _ui_remove_default_Ungroup_5 - give arg types
+  void _ui_remove_default_Ungroup_5();
+../Applications/Software/ui.h(20): warning:  #1295-D: Deprecated declaration ui_init - give arg types
+  void ui_init();
+../Applications/Software/ui.h(21): warning:  #1295-D: Deprecated declaration ui_updata - give arg types
+  void ui_updata();
+../Applications/Software/ui.h(23): warning:  #1295-D: Deprecated declaration char_change - give arg types
+  void char_change();
+../Applications/Software/ui.h(26): warning:  #1295-D: Deprecated declaration ui_chassisline - give arg types
+  void ui_chassisline();
+../Applications/Software/ui.h(27): warning:  #1295-D: Deprecated declaration ui_WarningLight - give arg types
+  void ui_WarningLight();
+../Applications/Software/ui.h(28): warning:  #1295-D: Deprecated declaration ui_Spin - give arg types
+  void ui_Spin();
+..\Applications\Software\referee_handle_pack.h(730): warning:  #1295-D: Deprecated declaration Required_Data - give arg types
+  void Required_Data();
+..\Applications\Software\referee_handle_pack.h(731): warning:  #1295-D: Deprecated declaration Cap_Required_Data - give arg types
+  void Cap_Required_Data(); 
+..\Applications\Software\referee_handle_pack.h(732): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Applications\Software\shoot.h(76): warning:  #1295-D: Deprecated declaration shoot_speed_limit - give arg types
+  void shoot_speed_limit();//
+..\Applications\Software\shoot.h(80): warning:  #1295-D: Deprecated declaration shoot_trigger_online - give arg types
+  void shoot_trigger_online();//PC操作
+..\Applications\Software\shoot.h(86): warning:  #1295-D: Deprecated declaration triger_clear_cnt - give arg types
+  void triger_clear_cnt();
+..\Applications\Software\NUC_communication.h(66): warning:  #1295-D: Deprecated declaration Test_communcation_0128 - give arg types
+  void Test_communcation_0128();
+..\Applications\Software\ui.c(53): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+    if(percent >=0.6)
+..\Applications\Software\ui.c(55): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+    if(percent<=0.6)
+..\Applications\Software\ui.c(57): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+    if(percent <=0.3)
+..\Applications\Software\ui.c: 34 warnings, 0 errors
+compiling referee_usart_task.c...
+..\Applications\Software\referee_handle_pack.h(730): warning:  #1295-D: Deprecated declaration Required_Data - give arg types
+  void Required_Data();
+..\Applications\Software\referee_handle_pack.h(731): warning:  #1295-D: Deprecated declaration Cap_Required_Data - give arg types
+  void Cap_Required_Data(); 
+..\Applications\Software\referee_handle_pack.h(732): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Applications\Software\referee_usart_task.c: 3 warnings, 0 errors
+compiling timers.c...
+compiling heap_4.c...
+compiling tasks.c...
+compiling port.c...
+compiling stm32f4xx_hal_dma.c...
+compiling stm32f4xx_hal_pcd_ex.c...
+compiling system_stm32f4xx.c...
+compiling stm32f4xx_hal_flash.c...
+compiling stm32f4xx_hal_pcd.c...
+compiling stm32f4xx_hal_rcc_ex.c...
+compiling stm32f4xx_hal_pwr.c...
+compiling stm32f4xx_hal_gpio.c...
+compiling stm32f4xx_hal_flash_ramfunc.c...
+compiling stm32f4xx_hal_flash_ex.c...
+compiling stm32f4xx_hal_dma_ex.c...
+compiling stm32f4xx_hal_rcc.c...
+compiling stm32f4xx_ll_usb.c...
+compiling cmsis_os2.c...
+compiling stm32f4xx_hal_exti.c...
+compiling stm32f4xx_hal_pwr_ex.c...
+compiling stm32f4xx_hal_crc.c...
+compiling stm32f4xx_hal.c...
+compiling stm32f4xx_hal_iwdg.c...
+compiling stm32f4xx_hal_i2c_ex.c...
+compiling stm32f4xx_hal_cortex.c...
+compiling stm32f4xx_hal_wwdg.c...
+compiling stm32f4xx_hal_can.c...
+compiling stm32f4xx_hal_tim_ex.c...
+compiling stm32f4xx_hal_spi.c...
+compiling stm32f4xx_hal_uart.c...
+compiling stm32f4xx_hal_tim.c...
+compiling stm32f4xx_hal_i2c.c...
+compiling usbd_core.c...
+compiling usbd_cdc.c...
+compiling usbd_ioreq.c...
+compiling usbd_ctlreq.c...
+linking...
+Program Size: Code=71892 RO-data=2736 RW-data=868 ZI-data=45980  
+FromELF: creating hex file...
+"RMc_adam_GeneralRobotSystemCode\RMc_adam_GeneralRobotSystemCode.axf" - 0 Error(s), 237 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.4.5.0.pack
+                ARM.CMSIS.4.5.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 4.3.0
+   * Component: DSP Version: 1.4.6
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.16.0.pack
+                Keil.STM32F4xx_DFP.2.16.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_RMc_adam_GeneralRobotSystemCode
+  D:\Keil5 535\ARM\CMSIS\4.5.0\CMSIS\Include
+  D:\Keil5 535\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:4.3.0
+
+   * Component: ARM::CMSIS:DSP:1.4.6
+      Library file:  CMSIS\Lib\ARM\arm_cortexM4lf_math.lib
+      Include file:  CMSIS\Include\arm_math.h
+Build Time Elapsed:  00:00:38
+</pre>
+</body>
+</html>
