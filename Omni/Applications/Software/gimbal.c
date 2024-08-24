@@ -123,7 +123,7 @@ void gimbal_updata()
 	{
 		gimbal.pitch.now = IMU_data.AHRS.pitch - degree2rad(gimbal.pitch.absoulte_offset); // 不要乱改哈，后续会加上绝对/相对的补偿。
 	}
-    //停在坡上
+	// 停在坡上
 	slope_calculation(IMU_data.AHRS.pitch, get_motor_data(PITCH_MOTOR).angle); // 计算底盘与地面的角度
 }
 
@@ -149,8 +149,7 @@ void gimbal_pid_cal()
 			gimbal.set_yaw_speed = pid_cal(&yaw_auto_pid, gimbal.yaw.now, gimbal.yaw.set);
 			set_motor(pid_cal(&yaw_auto_speed_pid, gimbal.yaw_speed, gimbal.set_yaw_speed) + get_motor_data(YAW_MOTOR).round_speed * KF, YAW_MOTOR);
 		}
-		else if (Global.input.vision_status == 1 && Global.input.anti_stauts
-			== 1) // 反陀螺
+		else if (Global.input.vision_status == 1 && Global.input.anti_stauts == 1) // 反陀螺
 		{
 			gimbal.set_yaw_speed = pid_cal(&yaw_absolute_pid, gimbal.yaw.now, gimbal.yaw.set);
 			set_motor(pid_cal(&yaw_absolute_speed_pid, gimbal.yaw_speed, gimbal.set_yaw_speed) + get_motor_data(YAW_MOTOR).round_speed * KF, YAW_MOTOR);
@@ -169,13 +168,13 @@ void gimbal_pid_cal()
 		// 正常模式 陀螺仪控制
 		else if (gimbal.pitch_status == ABSOLUTE && Global.input.vision_status == 0) // 非自瞄
 		{
-			
+
 			gimbal.set_pitch_speed = pid_cal(&pitch_absolute_pid, gimbal.pitch.now, gimbal.pitch.set);
 			set_motor(pid_cal(&pitch_absolute_speed_pid, gimbal.pitch_speed, gimbal.set_pitch_speed), PITCH_MOTOR);
 		}
 		else if (gimbal.pitch_status == ABSOLUTE && Global.input.vision_status == 1) // 自瞄
 		{
-			
+
 			gimbal.pitch.set = auto_pitch;
 			gimbal.set_pitch_speed = pid_cal(&pitch_auto_pid, gimbal.pitch.now, gimbal.pitch.set);
 			set_motor(pid_cal(&pitch_auto_speed_pid, gimbal.pitch_speed, gimbal.set_pitch_speed), PITCH_MOTOR);
@@ -192,7 +191,7 @@ void gimbal_set_offset(float ab_pitch, float ab_yaw, float lo_pitch, float lo_ya
 	gimbal.pitch.location_offset = lo_pitch;
 	gimbal.yaw.location_offset = lo_yaw;
 }
-//设置pitch限位
+// 设置pitch限位
 void gimbal_set_pitch(float pitch, float up_angle, float down_angle)
 {
 
@@ -227,7 +226,7 @@ float lnx(float a, float b, float c, float d, float x)
 // 设定角度
 void gimbal_set(float pitch, float yaw)
 {
-	gimbal.yaw_status = gimbal.pitch_status = LOCATION;// 以位置模式控制
+	gimbal.yaw_status = gimbal.pitch_status = LOCATION; // 以位置模式控制
 
 	// 范围限定 防止超出机械限位
 	if (fabs(pitch) < 15)
@@ -245,7 +244,6 @@ void gimbal_set_speed(float pitch, float yaw)
 	gimbal.set_yaw_speed = yaw;
 }
 
-
 // 未成形的前馈
 float feedforward_contorl(float target)
 {
@@ -258,6 +256,6 @@ float feedforward_contorl(float target)
 /*奇怪的多余函数，回去实验，没用就删掉*/
 void gimbal_set_yaw_speed(float yaw)
 {
-	gimbal.yaw_status = SPEED; 
+	gimbal.yaw_status = SPEED;
 	gimbal.set_yaw_speed = yaw;
 }
