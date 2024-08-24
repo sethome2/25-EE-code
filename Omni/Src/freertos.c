@@ -329,7 +329,7 @@ void ChassisTask_callback(void *argument)
 	/* Infinite loop */
 	for (;;)
 	{
-		chassis_moto_speed_calc();
+		chassis_moto_speed_current_calc();
 	  if(Global.mode == FLOW)
 		chassis_Flow_mode();
 		else if(Global.mode == SPIN)
@@ -356,7 +356,6 @@ void GimbalTask_callback(void *argument)
 		/* 云台控制 */
 		gimbal_updata();
 		gimbal_pid_cal();
-    //printf("%f,%f",yaw_absolute_pid.set,gimbal.yaw.now);
 		/* 发射机构控制 */
 		shoot_pid_cal();		
 		shoot_update();

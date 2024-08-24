@@ -125,7 +125,6 @@ void board_to_nuc(uint8_t time)//放在定时中断的任务，为了保证固定频率去发送
 	encodeSTM32(&toNUC, data, sizeof(STM32_data_t));
 	VirCom_send(data, sizeof(STM32_data_t));
 }
-
 /*自瞄任务，不要问为什么不妨到单独文件，问就是试过*/
 // 云台
 /*自瞄控制，思路很简单，因为视觉回传的是偏差，那我的目标值就是当前yaw+偏差=目标yaw（实时），
@@ -164,9 +163,21 @@ void auto_ctrl(void)
 			lost_count++;
 		}	
 		/*******自瞄操控*******/
-		if (vision_update_flag ==1&&fromNUC.shoot!=0)
+		/*if (vision_update_flag ==1&&fromNUC.shoot!=0)
 		{
-			//auto_yaw = auto_aim_judgement(raw_vision_data);//包括多种模式判断，返回对应的数值
+			//auto_yaw = auto_aim_judgement(raw_vision_data);//锟斤拷锟斤拷锟斤拷锟斤拷模式锟叫断ｏ拷锟斤拷锟截讹拷应锟斤拷锟斤拷值
+			auto_yaw = IMU_data.AHRS.yaw_rad_cnt-visual_yaw;
+			auto_pitch = IMU_data.AHRS.pitch - visual_pitch;
+			//auto_pitch =get_history_data(PITCH_DATA_HIS,pitch_err_time)- visual_pitch;
+		}
+		else
+		{
+			auto_yaw = record_yaw_now;	
+			auto_pitch = record_pitch_now;
+		}*/
+		if (Global.input.vision_online == 1&&fromNUC.shoot!=0)
+		{
+			//auto_yaw = auto_aim_judgement(raw_vision_data);//锟斤拷锟斤拷锟斤拷锟斤拷模式锟叫断ｏ拷锟斤拷锟截讹拷应锟斤拷锟斤拷值
 			auto_yaw = IMU_data.AHRS.yaw_rad_cnt-visual_yaw;
 			auto_pitch = IMU_data.AHRS.pitch - visual_pitch;
 			//auto_pitch =get_history_data(PITCH_DATA_HIS,pitch_err_time)- visual_pitch;
@@ -176,8 +187,7 @@ void auto_ctrl(void)
 			auto_yaw = record_yaw_now;	
 			auto_pitch = record_pitch_now;
 		}
-		//回头得修改，因为有时候转得太快视觉识别不到数据帧会直接卡死。
-		
+		//回头得修改，因为有时候转得太快视觉识别不到数据帧会直接卡死。		
 }
 
 
@@ -205,7 +215,7 @@ float  auto_aim_judgement(float input)
 
 }
 //
-bool update_sensor_data(float new_data) //采样30ms，平滑数据防止突变
+bool update_sensor_data(float new_data) //锟斤拷锟斤拷30ms锟斤拷平锟斤拷锟斤拷锟捷凤拷止突锟斤拷
 {
 	ready_time++;
 //	i =medianFilter(DATA_SIZE, new_data);	

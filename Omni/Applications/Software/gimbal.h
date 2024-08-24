@@ -20,19 +20,14 @@
 #define YAW_MOTOR CAN_2_5
 #define PI 3.1415926f
 
-extern float  pitch_test_link;
-extern float yaw_test_link;
 extern pid_t yaw_absolute_speed_pid;
 extern pid_t yaw_absolute_pid;
-
-
-
 
 enum gimbal_status_e
 {
     LOCATION = 0,
     SPEED,
-	ABSOLUTE,
+	  ABSOLUTE,
     zero_force,
 };
 
@@ -63,21 +58,21 @@ extern struct gimbal_status gimbal;
 
 //外部调用
 void gimbal_init(void);                         //初始化云台
-void gimbal_set_offset(float ab_pitch, float ab_yaw,float lo_pitch,float lo_yaw); //初始化零点
-
-void gimbal_set(float pitch, float yaw); //设置角度
-void gimbal_set_pitch(float pitch,float up_angle,float down_angle);      //设定picth角度,限幅用
-
-void gimbal_set_speed(float pitch, float yaw); //设定速度
-void gimbal_set_yaw_speed(float yaw);          //设定yaw速度
-
-void gimbal_pid_cal(void); //云台PID计算
 void gimbal_updata(void);  //更新云台数据
-void gimbal_clear_cnt(void);
+void gimbal_pid_cal(void); //云台PID计算
+
+void gimbal_set_offset(float ab_pitch, float ab_yaw,float lo_pitch,float lo_yaw); //初始化零点
+void gimbal_set_pitch(float pitch,float up_angle,float down_angle);      //设定picth角度,限幅用
 
 float slope_calculation(float IMU_pitch,float LOCATION_pitch);//计算地盘与地面的角度
 
+void gimbal_clear_cnt(void);
+void gimbal_set(float pitch, float yaw); //设置角度
+void gimbal_set_speed(float pitch, float yaw); //设定速度
 float feedforward_contorl(float target);//前馈
+
+void gimbal_set_yaw_speed(float yaw);          //设定yaw速度
+
 
 // end of file
 
