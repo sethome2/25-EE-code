@@ -1,0 +1,82 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.35.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: R YJ, Adam, LIC=PE7DL-0VSD0-9UH4U-SQYP5-N30TQ-QZM0N
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.35.0.2
+Toolchain Path:  D:\Keil5 535\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.35.0.2
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      CMSIS_AGDI.dll V1.33.0.0
+Dialog DLL:      TCM.DLL V1.53.0.0
+ 
+<h2>Project:</h2>
+c:\Users\RYJ\Desktop\RM24-special-Omni\MDK-ARM\RMc_adam_GeneralRobotSystemCode.uvprojx
+Project File Date:  08/18/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\Keil5 535\ARM\ARMCC\Bin'
+Build target 'RMc_adam_GeneralRobotSystemCode'
+compiling chassis_move.c...
+../Applications/Hardware/IMU_updata.h(63): warning:  #1295-D: Deprecated declaration process_IMU_data - give arg types
+  void process_IMU_data();
+..\Applications\Software\referee_handle_pack.h(730): warning:  #1295-D: Deprecated declaration Required_Data - give arg types
+  void Required_Data();
+..\Applications\Software\referee_handle_pack.h(731): warning:  #1295-D: Deprecated declaration Cap_Required_Data - give arg types
+  void Cap_Required_Data(); 
+..\Applications\Software\referee_handle_pack.h(732): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Applications\Software\chassis_move.c(143): warning:  #188-D: enumerated type mixed with another type
+  		now_p += fabs(current[i] * toque_coefficient * get_motor_data(i).speed_rpm +
+..\Applications\Software\chassis_move.c(144): warning:  #188-D: enumerated type mixed with another type
+  					  k2 * get_motor_data(i).speed_rpm * get_motor_data(i).speed_rpm +
+..\Applications\Software\chassis_move.c(144): warning:  #188-D: enumerated type mixed with another type
+  					  k2 * get_motor_data(i).speed_rpm * get_motor_data(i).speed_rpm +
+..\Applications\Software\chassis_move.c(450): warning:  #940-D: missing return statement at end of non-void function "fly_speed_up" 
+  }
+..\Applications\Software\chassis_move.c: 8 warnings, 0 errors
+linking...
+Program Size: Code=71620 RO-data=2736 RW-data=860 ZI-data=45980  
+FromELF: creating hex file...
+"RMc_adam_GeneralRobotSystemCode\RMc_adam_GeneralRobotSystemCode.axf" - 0 Error(s), 8 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.4.5.0.pack
+                ARM.CMSIS.4.5.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 4.3.0
+   * Component: DSP Version: 1.4.6
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.16.0.pack
+                Keil.STM32F4xx_DFP.2.16.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_RMc_adam_GeneralRobotSystemCode
+  D:\Keil5 535\ARM\CMSIS\4.5.0\CMSIS\Include
+  D:\Keil5 535\Keil\STM32F4xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:4.3.0
+
+   * Component: ARM::CMSIS:DSP:1.4.6
+      Include file:  CMSIS\Include\arm_math.h
+      Library file:  CMSIS\Lib\ARM\arm_cortexM4lf_math.lib
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>

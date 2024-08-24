@@ -1,0 +1,25 @@
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\Keil5 535\ARM\ARMCC\Bin'
+Build target 'RMc_adam_GeneralRobotSystemCode'
+compiling chassis_move.c...
+../Applications/Hardware/IMU_updata.h(63): warning:  #1295-D: Deprecated declaration process_IMU_data - give arg types
+  void process_IMU_data();
+..\Applications\Software\referee_handle_pack.h(730): warning:  #1295-D: Deprecated declaration Required_Data - give arg types
+  void Required_Data();
+..\Applications\Software\referee_handle_pack.h(731): warning:  #1295-D: Deprecated declaration Cap_Required_Data - give arg types
+  void Cap_Required_Data(); 
+..\Applications\Software\referee_handle_pack.h(732): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Applications\Software\chassis_move.c(143): warning:  #188-D: enumerated type mixed with another type
+  		now_p += fabs(current[i] * toque_coefficient * get_motor_data(i).speed_rpm +
+..\Applications\Software\chassis_move.c(144): warning:  #188-D: enumerated type mixed with another type
+  					  k2 * get_motor_data(i).speed_rpm * get_motor_data(i).speed_rpm +
+..\Applications\Software\chassis_move.c(144): warning:  #188-D: enumerated type mixed with another type
+  					  k2 * get_motor_data(i).speed_rpm * get_motor_data(i).speed_rpm +
+..\Applications\Software\chassis_move.c(450): warning:  #940-D: missing return statement at end of non-void function "fly_speed_up" 
+  }
+..\Applications\Software\chassis_move.c: 8 warnings, 0 errors
+linking...
+Program Size: Code=71620 RO-data=2736 RW-data=860 ZI-data=45980  
+FromELF: creating hex file...
+"RMc_adam_GeneralRobotSystemCode\RMc_adam_GeneralRobotSystemCode.axf" - 0 Error(s), 8 Warning(s).
+Build Time Elapsed:  00:00:03
