@@ -10,7 +10,7 @@
       <TargetName>RMc_adam_GeneralRobotSystemCode</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pArmCC>5060960::V5.06 update 7 (build 960)::.\ARMCC</pArmCC>
+      <pArmCC>5060960::V5.06 update 7 (build 960)::ARMCC</pArmCC>
       <pCCUsed>5060960::V5.06 update 7 (build 960)::ARMCC</pCCUsed>
       <uAC6>0</uAC6>
       <TargetOption>
@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F407xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Middlewares/ST/STM32_USB_Device_Library/Core/Inc;../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../Drivers/Chip;../Algorithm;../Algorithm/Include;../Applications/Software;../Applications/Hardware</IncludePath>
+              <IncludePath>../Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Middlewares/ST/STM32_USB_Device_Library/Core/Inc;../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../Drivers/Chip;../Algorithm;../Algorithm/Include;../Applications/Software;../Applications/Hardware;../Applications/Software/ui</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1014,17 +1014,17 @@
             <File>
               <FileName>ui_interface.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\Applications\Software\ui_interface.h</FilePath>
+              <FilePath>..\Applications\Software\ui\ui_interface.h</FilePath>
             </File>
             <File>
               <FileName>ui_interface.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Applications\Software\ui_interface.c</FilePath>
+              <FilePath>..\Applications\Software\ui\ui_interface.c</FilePath>
             </File>
             <File>
               <FileName>ui_types.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\Applications\Software\ui_types.h</FilePath>
+              <FilePath>..\Applications\Software\ui\ui_types.h</FilePath>
             </File>
             <File>
               <FileName>ui.c</FileName>
@@ -1034,32 +1034,32 @@
             <File>
               <FileName>ui_default_Ungroup_0.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Applications\Software\ui_default_Ungroup_0.c</FilePath>
+              <FilePath>..\Applications\Software\ui\ui_default_Ungroup_0.c</FilePath>
             </File>
             <File>
               <FileName>ui_default_Ungroup_1.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Applications\Software\ui_default_Ungroup_1.c</FilePath>
+              <FilePath>..\Applications\Software\ui\ui_default_Ungroup_1.c</FilePath>
             </File>
             <File>
               <FileName>ui_default_Ungroup_2.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Applications\Software\ui_default_Ungroup_2.c</FilePath>
+              <FilePath>..\Applications\Software\ui\ui_default_Ungroup_2.c</FilePath>
             </File>
             <File>
               <FileName>ui_default_Ungroup_4.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Applications\Software\ui_default_Ungroup_4.c</FilePath>
+              <FilePath>..\Applications\Software\ui\ui_default_Ungroup_4.c</FilePath>
             </File>
             <File>
               <FileName>ui_default_Ungroup_3.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Applications\Software\ui_default_Ungroup_3.c</FilePath>
+              <FilePath>..\Applications\Software\ui\ui_default_Ungroup_3.c</FilePath>
             </File>
             <File>
               <FileName>ui_default_Ungroup_5.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Applications\Software\ui_default_Ungroup_5.c</FilePath>
+              <FilePath>..\Applications\Software\ui\ui_default_Ungroup_5.c</FilePath>
             </File>
           </Files>
         </Group>
