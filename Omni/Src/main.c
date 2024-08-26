@@ -138,7 +138,7 @@ int main(void)
   MX_TIM4_Init();
   MX_IWDG_Init();
   MX_TIM6_Init();
-  MX_WWDG_Init();
+//  MX_WWDG_Init();
   /* USER CODE BEGIN 2 */
 
   // 初始化各项应用
@@ -146,7 +146,7 @@ int main(void)
   led_show(RED); // 初始化指示
   //目前使用来激活相机图传
   HAL_GPIO_WritePin(Laser_GPIO_Port, Laser_Pin, GPIO_PIN_SET);	// Laser_init();
-
+//  HAL_WWDG_Refresh(&hwwdg);
   // 初始化硬件
   can_filter_init();        // can 过滤器
   remote_control_init();    // 遥控器初始化
