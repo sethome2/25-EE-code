@@ -138,7 +138,7 @@ int main(void)
   MX_TIM4_Init();
   MX_IWDG_Init();
   MX_TIM6_Init();
-  MX_WWDG_Init();
+  //MX_WWDG_Init();
   /* USER CODE BEGIN 2 */
 
   // 初始化各项应用
