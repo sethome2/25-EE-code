@@ -207,6 +207,11 @@
           <WinNumber>2</WinNumber>
           <ItemText>pitch_absolute_pid</ItemText>
         </Ww>
+        <Ww>
+          <count>1</count>
+          <WinNumber>2</WinNumber>
+          <ItemText>pitch_absolute_pid</ItemText>
+        </Ww>
       </WatchWindow2>
       <Tracepoint>
         <THDelay>0</THDelay>
@@ -214,6 +219,7 @@
       <DebugFlag>
         <trace>0</trace>
         <periodic>1</periodic>
+        <aLwin>1</aLwin>
         <aLwin>1</aLwin>
         <aCover>0</aCover>
         <aSer1>0</aSer1>
@@ -262,7 +268,7 @@
 
   <Group>
     <GroupName>Application/User</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -910,6 +916,7 @@
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>..\Applications\Software\ui\ui_interface.h</PathWithFileName>
+      <PathWithFileName>..\Applications\Software\ui\ui_interface.h</PathWithFileName>
       <FilenameWithoutPath>ui_interface.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -922,6 +929,7 @@
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>..\Applications\Software\ui\ui_interface.c</PathWithFileName>
+      <PathWithFileName>..\Applications\Software\ui\ui_interface.c</PathWithFileName>
       <FilenameWithoutPath>ui_interface.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -933,6 +941,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
+      <PathWithFileName>..\Applications\Software\ui\ui_types.h</PathWithFileName>
       <PathWithFileName>..\Applications\Software\ui\ui_types.h</PathWithFileName>
       <FilenameWithoutPath>ui_types.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
@@ -958,6 +967,7 @@
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>..\Applications\Software\ui\ui_default_Ungroup_0.c</PathWithFileName>
+      <PathWithFileName>..\Applications\Software\ui\ui_default_Ungroup_0.c</PathWithFileName>
       <FilenameWithoutPath>ui_default_Ungroup_0.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -969,6 +979,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
+      <PathWithFileName>..\Applications\Software\ui\ui_default_Ungroup_1.c</PathWithFileName>
       <PathWithFileName>..\Applications\Software\ui\ui_default_Ungroup_1.c</PathWithFileName>
       <FilenameWithoutPath>ui_default_Ungroup_1.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
@@ -982,6 +993,7 @@
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>..\Applications\Software\ui\ui_default_Ungroup_2.c</PathWithFileName>
+      <PathWithFileName>..\Applications\Software\ui\ui_default_Ungroup_2.c</PathWithFileName>
       <FilenameWithoutPath>ui_default_Ungroup_2.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -993,6 +1005,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
+      <PathWithFileName>..\Applications\Software\ui\ui_default_Ungroup_4.c</PathWithFileName>
       <PathWithFileName>..\Applications\Software\ui\ui_default_Ungroup_4.c</PathWithFileName>
       <FilenameWithoutPath>ui_default_Ungroup_4.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
@@ -1006,6 +1019,7 @@
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>..\Applications\Software\ui\ui_default_Ungroup_3.c</PathWithFileName>
+      <PathWithFileName>..\Applications\Software\ui\ui_default_Ungroup_3.c</PathWithFileName>
       <FilenameWithoutPath>ui_default_Ungroup_3.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1017,6 +1031,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
+      <PathWithFileName>..\Applications\Software\ui\ui_default_Ungroup_5.c</PathWithFileName>
       <PathWithFileName>..\Applications\Software\ui\ui_default_Ungroup_5.c</PathWithFileName>
       <FilenameWithoutPath>ui_default_Ungroup_5.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
