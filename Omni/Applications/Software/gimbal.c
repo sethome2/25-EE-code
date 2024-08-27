@@ -104,7 +104,6 @@ void gimbal_updata()
 	gimbal.yaw.now = IMU_data.AHRS.yaw_rad_cnt;
 	gimbal.yaw_speed = cos(IMU_data.AHRS.pitch) * IMU_data.gyro[2] - sin(IMU_data.AHRS.pitch) * IMU_data.gyro[0]; // 多角度融合
 	// 设置pitch限位
-	gimbal_set_pitch(gimbal.pitch.set, 32.0f, 23.0f);
 	// 设置pitch轴数据
 	if (Global.input.fly_status == 1)
 	{
@@ -122,6 +121,7 @@ void gimbal_updata()
 	else if (gimbal.pitch_status == ABSOLUTE)
 	{
 		gimbal.pitch.now = IMU_data.AHRS.pitch - degree2rad(gimbal.pitch.absoulte_offset); // 不要乱改哈，后续会加上绝对/相对的补偿。
+		gimbal.pitch_speed = IMU_data.gyro[1];
 	}
 	// 停在坡上
 	slope_calculation(IMU_data.AHRS.pitch, get_motor_data(PITCH_MOTOR).angle); // 计算底盘与地面的角度
@@ -129,59 +129,57 @@ void gimbal_updata()
 
 void gimbal_pid_cal()
 {
-	if (Global.mode != LOCK)
+	gimbal_set_pitch(gimbal.pitch.set, 32.0f, 23.0f);
+	/**********************************yaw轴行为控制***********************************************/
+	if (gimbal.yaw_status == LOCATION) // 编码器 没用到 留为备用
 	{
-		/**********************************yaw轴行为控制***********************************************/
-		if (gimbal.yaw_status == LOCATION) // 编码器 没用到 留为备用
-		{
-			gimbal.set_yaw_speed = pid_cal(&yaw_location_pid, gimbal.yaw.now, gimbal.yaw.set);
-			set_motor(pid_cal(&yaw_location_speed_pid, gimbal.yaw_speed, gimbal.set_yaw_speed), YAW_MOTOR);
-		}
-		// yaw全为陀螺仪控制
-		else if (gimbal.yaw_status == ABSOLUTE && Global.input.vision_status == 0) // 非自瞄
-		{
-			gimbal.set_yaw_speed = pid_cal(&yaw_absolute_pid, gimbal.yaw.now, gimbal.yaw.set);
-			set_motor(pid_cal(&yaw_absolute_speed_pid, gimbal.yaw_speed, gimbal.set_yaw_speed) + get_motor_data(YAW_MOTOR).round_speed * KF, YAW_MOTOR);
-		}
-		else if (Global.input.vision_status == 1 && Global.input.anti_stauts == 0) // 自瞄
-		{
-			gimbal.yaw.set = auto_yaw;
-			gimbal.set_yaw_speed = pid_cal(&yaw_auto_pid, gimbal.yaw.now, gimbal.yaw.set);
-			set_motor(pid_cal(&yaw_auto_speed_pid, gimbal.yaw_speed, gimbal.set_yaw_speed) + get_motor_data(YAW_MOTOR).round_speed * KF, YAW_MOTOR);
-		}
-		else if (Global.input.vision_status == 1 && Global.input.anti_stauts == 1) // 反陀螺
-		{
-			gimbal.set_yaw_speed = pid_cal(&yaw_absolute_pid, gimbal.yaw.now, gimbal.yaw.set);
-			set_motor(pid_cal(&yaw_absolute_speed_pid, gimbal.yaw_speed, gimbal.set_yaw_speed) + get_motor_data(YAW_MOTOR).round_speed * KF, YAW_MOTOR);
-		}
-		else
-			gimbal.set_yaw_speed = gimbal.yaw_speed;
-
-		/**********************************pitch轴行为控制***********************************************/
-
-		// 飞坡模式 编码器控制
-		if (gimbal.pitch_status == LOCATION)
-		{
-			gimbal.set_pitch_speed = pid_cal(&pitch_location_pid, gimbal.pitch.now, pitch_fly_angle);
-			set_motor(pid_cal(&pitch_location_speed_pid, gimbal.pitch_speed, gimbal.set_pitch_speed), PITCH_MOTOR);
-		}
-		// 正常模式 陀螺仪控制
-		else if (gimbal.pitch_status == ABSOLUTE && Global.input.vision_status == 0) // 非自瞄
-		{
-
-			gimbal.set_pitch_speed = pid_cal(&pitch_absolute_pid, gimbal.pitch.now, gimbal.pitch.set);
-			set_motor(pid_cal(&pitch_absolute_speed_pid, gimbal.pitch_speed, gimbal.set_pitch_speed), PITCH_MOTOR);
-		}
-		else if (gimbal.pitch_status == ABSOLUTE && Global.input.vision_status == 1) // 自瞄
-		{
-
-			gimbal.pitch.set = auto_pitch;
-			gimbal.set_pitch_speed = pid_cal(&pitch_auto_pid, gimbal.pitch.now, gimbal.pitch.set);
-			set_motor(pid_cal(&pitch_auto_speed_pid, gimbal.pitch_speed, gimbal.set_pitch_speed), PITCH_MOTOR);
-		}
-		else
-			gimbal.set_pitch_speed = gimbal.pitch_speed;
+		gimbal.set_yaw_speed = pid_cal(&yaw_location_pid, gimbal.yaw.now, gimbal.yaw.set);
+		set_motor(pid_cal(&yaw_location_speed_pid, gimbal.yaw_speed, gimbal.set_yaw_speed), YAW_MOTOR);
 	}
+	// yaw全为陀螺仪控制
+	else if (gimbal.yaw_status == ABSOLUTE && Global.input.vision_status == 0) // 非自瞄
+	{
+		gimbal.set_yaw_speed = pid_cal(&yaw_absolute_pid, gimbal.yaw.now, gimbal.yaw.set);
+		set_motor(pid_cal(&yaw_absolute_speed_pid, gimbal.yaw_speed, gimbal.set_yaw_speed) + get_motor_data(YAW_MOTOR).round_speed * KF, YAW_MOTOR);
+	}
+	else if (Global.input.vision_status == 1 && Global.input.anti_stauts == 0) // 自瞄
+	{
+		gimbal.yaw.set = auto_yaw;
+		gimbal.set_yaw_speed = pid_cal(&yaw_auto_pid, gimbal.yaw.now, gimbal.yaw.set);
+		set_motor(pid_cal(&yaw_auto_speed_pid, gimbal.yaw_speed, gimbal.set_yaw_speed) + get_motor_data(YAW_MOTOR).round_speed * KF, YAW_MOTOR);
+	}
+	else if (Global.input.vision_status == 1 && Global.input.anti_stauts == 1) // 反陀螺
+	{
+		gimbal.set_yaw_speed = pid_cal(&yaw_absolute_pid, gimbal.yaw.now, gimbal.yaw.set);
+		set_motor(pid_cal(&yaw_absolute_speed_pid, gimbal.yaw_speed, gimbal.set_yaw_speed) + get_motor_data(YAW_MOTOR).round_speed * KF, YAW_MOTOR);
+	}
+	else
+		gimbal.set_yaw_speed = gimbal.yaw_speed;
+
+	/**********************************pitch轴行为控制***********************************************/
+
+	// 飞坡模式 编码器控制
+	if (gimbal.pitch_status == LOCATION)
+	{
+		gimbal.set_pitch_speed = pid_cal(&pitch_location_pid, gimbal.pitch.now, pitch_fly_angle);
+		set_motor(pid_cal(&pitch_location_speed_pid, gimbal.pitch_speed, gimbal.set_pitch_speed), PITCH_MOTOR);
+	}
+	// 正常模式 陀螺仪控制
+	else if (gimbal.pitch_status == ABSOLUTE && Global.input.vision_status == 0) // 非自瞄
+	{
+
+		gimbal.set_pitch_speed = pid_cal(&pitch_absolute_pid, gimbal.pitch.now, gimbal.pitch.set);
+		set_motor(pid_cal(&pitch_absolute_speed_pid, gimbal.pitch_speed, gimbal.set_pitch_speed), PITCH_MOTOR);
+	}
+	else if (gimbal.pitch_status == ABSOLUTE && Global.input.vision_status == 1) // 自瞄
+	{
+
+		gimbal.pitch.set = auto_pitch;
+		gimbal.set_pitch_speed = pid_cal(&pitch_auto_pid, gimbal.pitch.now, gimbal.pitch.set);
+		set_motor(pid_cal(&pitch_auto_speed_pid, gimbal.pitch_speed, gimbal.set_pitch_speed), PITCH_MOTOR);
+	}
+	else
+		gimbal.set_pitch_speed = gimbal.pitch_speed;
 }
 // 零点设置，在main.c中被调用
 void gimbal_set_offset(float ab_pitch, float ab_yaw, float lo_pitch, float lo_yaw)
