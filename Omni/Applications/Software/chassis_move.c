@@ -155,12 +155,12 @@ float power_limit(int32_t current[4])
 }
 // 计算底盘马达速度及电流
 void chassis_moto_speed_current_calc()
-{ 
+{
 	// 最大速度限制
 	val_limit(&chassis.speed.x, chassis.speed.max_x);
 	val_limit(&chassis.speed.y, chassis.speed.max_y);
 	val_limit(&chassis.speed.r, chassis.speed.max_r);
-    //设置底盘电机
+	// 设置底盘电机
 	decode_as_3508(CAN_1_1);
 	decode_as_3508(CAN_1_2);
 	decode_as_3508(CAN_1_3);
@@ -201,7 +201,7 @@ void chassis_moto_speed_current_calc()
 			chassis.speed.r = -(chassis.acc.max_r * dt + chassis.speed.now_r);
 		chassis.speed.r = chassis.acc.max_r * dt + chassis.speed.now_r;
 	}
-	
+
 	chassis.angle_now[FR] = motor_data[0].angle_cnt;
 	chassis.angle_now[FL] = motor_data[1].angle_cnt;
 	chassis.angle_now[BL] = motor_data[2].angle_cnt;
@@ -355,17 +355,15 @@ void chassis_Spin_mode()
 	if (fabs(Global.input.pitch) > 0.0f)
 		gimbal.pitch.set -= Global.input.pitch;
 
-	if (spin == 1)
+	chassis.speed.x = -x_s; //-x_s
+	chassis.speed.y = -y_s; //-y_s
+	if (Global.mode == SPIN)
 	{
-		chassis.speed.x = -x_s; //-x_s
-		chassis.speed.y = -y_s; //-y_s
 		chassis.speed.r = -r_s;
 	}
 
-	if (spin == 0)
+	if (Global.mode == TUSP)
 	{
-		chassis.speed.x = -x_s; //-x_s
-		chassis.speed.y = -y_s; //-y_s
 		chassis.speed.r = r_s;
 	}
 }

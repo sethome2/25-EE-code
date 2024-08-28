@@ -208,7 +208,14 @@ float slope_calculation(float IMU_pitch, float LOCATION_pitch)
 	slope = rad2degree(IMU_pitch) - LOCATION_pitch - 48.5;
 	return slope;
 }
-
+//弹舱盖开启
+void cover_open(){
+	set_servo_angle(PIN_3, 42);
+}
+//弹舱盖关闭
+void cover_close(){
+	set_servo_angle(PIN_3, 170);
+}
 /*********************以下函数没有被用到，保留以防以后用到***********************/
 
 void gimbal_clear_cnt(void)
