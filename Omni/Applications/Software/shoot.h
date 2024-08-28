@@ -75,7 +75,7 @@ void shoot_pid_cal(void); // ¼ÆËãpid
 
 void shoot_speed_limit();//
 
-void RC_trigger_anti_kill_and_set_speed(float set);
+void Trigger_anti_kill_and_set_speed(float set);
 
 void shoot_trigger_online();//PC²Ù×÷
 

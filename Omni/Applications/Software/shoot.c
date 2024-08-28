@@ -120,11 +120,11 @@ void shoot_pid_cal(void) // ÈÚºÏÁË¶à¸ö¹¦ÄÜ£¬ÉäËÙÇĞ»»£¬ÈÈÁ¿¿ØÖÆ£¬×ÔÃé·Ç×ÔÃépid²»Í
 			if (power_heat_data.shooter_17mm_1_barrel_heat < (robot_status.shooter_barrel_heat_limit - 20)) // 180
 			{
 				if (power_heat_data.shooter_17mm_1_barrel_heat < (robot_status.shooter_barrel_heat_limit - 120)) // 80
-					RC_trigger_anti_kill_and_set_speed(set / 1.5f);
+					Trigger_anti_kill_and_set_speed(set / 1.5f);
 				else if ((power_heat_data.shooter_17mm_1_barrel_heat > (robot_status.shooter_barrel_heat_limit - 120)) && (power_heat_data.shooter_17mm_1_barrel_heat < (robot_status.shooter_barrel_heat_limit - 90))) // 80--110
-					RC_trigger_anti_kill_and_set_speed(set / 3.0);
+					Trigger_anti_kill_and_set_speed(set / 3.0);
 				else
-					RC_trigger_anti_kill_and_set_speed(set / 4.0f); // 150-180
+					Trigger_anti_kill_and_set_speed(set / 4.0f); // 150-180
 			}
 			else
 				shoot.set_trigger_speed = 0.0f;
@@ -134,18 +134,18 @@ void shoot_pid_cal(void) // ÈÚºÏÁË¶à¸ö¹¦ÄÜ£¬ÉäËÙÇĞ»»£¬ÈÈÁ¿¿ØÖÆ£¬×ÔÃé·Ç×ÔÃépid²»Í
 			if (power_heat_data.shooter_17mm_1_barrel_heat < (robot_status.shooter_barrel_heat_limit - 20))
 			{
 				if (power_heat_data.shooter_17mm_1_barrel_heat < (robot_status.shooter_barrel_heat_limit - 140)) // 60
-					RC_trigger_anti_kill_and_set_speed(set);
+					Trigger_anti_kill_and_set_speed(set);
 				else if ((power_heat_data.shooter_17mm_1_barrel_heat > (robot_status.shooter_barrel_heat_limit - 140)) && (power_heat_data.shooter_17mm_1_barrel_heat < (robot_status.shooter_barrel_heat_limit - 70))) // 60--130
-					RC_trigger_anti_kill_and_set_speed(set/1.5f);
+					Trigger_anti_kill_and_set_speed(set/1.5f);
 				else
-					RC_trigger_anti_kill_and_set_speed(set/4.0f);
+					Trigger_anti_kill_and_set_speed(set/4.0f);
 			}
 			else
 				shoot.set_trigger_speed = 0.0f;
 		}
 	}
 	else // Ò£¿ØÆ÷¿ØÖÆ
-		RC_trigger_anti_kill_and_set_speed(Global.input.shoot_RC*10);
+		Trigger_anti_kill_and_set_speed(Global.input.shoot_RC*10);
 	// ËÙ¶È»·
 	if (shoot.set_trigger_speed || get_motor_data(TRIGGER_MOTOR).speed_rpm >= 5)
 		set_motor(pid_cal(&trigger_speed_pid, get_motor_data(TRIGGER_MOTOR).speed_rpm, shoot.set_trigger_speed), TRIGGER_MOTOR);
@@ -178,7 +178,7 @@ void shoot_speed_limit()
 	}
 }
 
-void RC_trigger_anti_kill_and_set_speed(float set) // ¸øÒ£¿ØÆ÷ÈÎÎñµ¥¶ÀÓÃµÄ£¬ÓÃÓÚ²ÃÅĞÏµÍ³½£Â¼Ê±·ÀÖ¹¿¨µ¯£¬ÏÖÒ²ÓÃÓÚ¼üÊó²Ù×÷ÏÂµÄ¶Â×ª·´×ª
+void Trigger_anti_kill_and_set_speed(float set) // ÉèÖÃ²¦µ¯ÅÌËÙ¶È£¬ÄÚÇ¶¶Â×ªÇé¿öÏÂ×Ô¶¯·´×ª¹¦ÄÜ
 {
 	shoot.trigger_status = SPEEDS;			 // ËÙ¶È»·¿ØÖÆ£¬½øĞĞÄ£Ê½ÇĞ»»
 	if (shoot.trigger_given_current > 10000) // ´ïµ½¿¨µ¯µçÁ÷ãĞÖµ

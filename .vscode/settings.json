@@ -60,6 +60,7 @@
   "C_Cpp.errorSquiggles": "disabled",
   "files.associations": {
     "gimbal.h": "c",
-    "control_setting.h": "c"
+    "control_setting.h": "c",
+    "shoot.h": "c"
   }
 }
