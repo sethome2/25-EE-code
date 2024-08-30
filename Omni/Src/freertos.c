@@ -85,63 +85,62 @@ extern uint8_t coverop;
 extern pid_t motor_speed[4];
 extern float relative_angle;
 
-
 /* USER CODE END Variables */
 /* Definitions for Flash_LED_Task */
 osThreadId_t Flash_LED_TaskHandle;
 const osThreadAttr_t Flash_LED_Task_attributes = {
-  .name = "Flash_LED_Task",
-  .stack_size = 128 * 4,
-  .priority = (osPriority_t) osPriorityLow,
+    .name = "Flash_LED_Task",
+    .stack_size = 128 * 4,
+    .priority = (osPriority_t)osPriorityLow,
 };
 /* Definitions for CAN_sendTask */
 osThreadId_t CAN_sendTaskHandle;
 const osThreadAttr_t CAN_sendTask_attributes = {
-  .name = "CAN_sendTask",
-  .stack_size = 256 * 4,
-  .priority = (osPriority_t) osPriorityRealtime7,
+    .name = "CAN_sendTask",
+    .stack_size = 256 * 4,
+    .priority = (osPriority_t)osPriorityRealtime7,
 };
 /* Definitions for RemoteTask */
 osThreadId_t RemoteTaskHandle;
 const osThreadAttr_t RemoteTask_attributes = {
-  .name = "RemoteTask",
-  .stack_size = 1024 * 4,
-  .priority = (osPriority_t) osPriorityRealtime,
+    .name = "RemoteTask",
+    .stack_size = 1024 * 4,
+    .priority = (osPriority_t)osPriorityRealtime,
 };
 /* Definitions for ChassisTask */
 osThreadId_t ChassisTaskHandle;
 const osThreadAttr_t ChassisTask_attributes = {
-  .name = "ChassisTask",
-  .stack_size = 512 * 4,
-  .priority = (osPriority_t) osPriorityBelowNormal,
+    .name = "ChassisTask",
+    .stack_size = 512 * 4,
+    .priority = (osPriority_t)osPriorityBelowNormal,
 };
 /* Definitions for GimbalTask */
 osThreadId_t GimbalTaskHandle;
 const osThreadAttr_t GimbalTask_attributes = {
-  .name = "GimbalTask",
-  .stack_size = 128 * 4,
-  .priority = (osPriority_t) osPriorityRealtime,
+    .name = "GimbalTask",
+    .stack_size = 128 * 4,
+    .priority = (osPriority_t)osPriorityRealtime,
 };
 /* Definitions for ErrorDetectTask */
 osThreadId_t ErrorDetectTaskHandle;
 const osThreadAttr_t ErrorDetectTask_attributes = {
-  .name = "ErrorDetectTask",
-  .stack_size = 128 * 4,
-  .priority = (osPriority_t) osPriorityBelowNormal,
+    .name = "ErrorDetectTask",
+    .stack_size = 128 * 4,
+    .priority = (osPriority_t)osPriorityBelowNormal,
 };
 /* Definitions for RefereeTask */
 osThreadId_t RefereeTaskHandle;
 const osThreadAttr_t RefereeTask_attributes = {
-  .name = "RefereeTask",
-  .stack_size = 1024 * 4,
-  .priority = (osPriority_t) osPriorityBelowNormal,
+    .name = "RefereeTask",
+    .stack_size = 1024 * 4,
+    .priority = (osPriority_t)osPriorityBelowNormal,
 };
 /* Definitions for UI_Refresh */
 osThreadId_t UI_RefreshHandle;
 const osThreadAttr_t UI_Refresh_attributes = {
-  .name = "UI_Refresh",
-  .stack_size = 256 * 4,
-  .priority = (osPriority_t) osPriorityLow,
+    .name = "UI_Refresh",
+    .stack_size = 256 * 4,
+    .priority = (osPriority_t)osPriorityLow,
 };
 
 /* Private function prototypes -----------------------------------------------*/
@@ -165,44 +164,45 @@ void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 void vApplicationIdleHook(void);
 
 /* USER CODE BEGIN 2 */
-void vApplicationIdleHook( void )
+void vApplicationIdleHook(void)
 {
-   /* vApplicationIdleHook() will only be called if configUSE_IDLE_HOOK is set
-   to 1 in FreeRTOSConfig.h. It will be called on each iteration of the idle
-   task. It is essential that code added to this hook function never attempts
-   to block in any way (for example, call xQueueReceive() with a block time
-   specified, or call vTaskDelay()). If the application makes use of the
-   vTaskDelete() API function (as this demo application does) then it is also
-   important that vApplicationIdleHook() is permitted to return to its calling
-   function, because it is the responsibility of the idle task to clean up
-   memory allocated by the kernel to any task that has since been deleted. */
+  /* vApplicationIdleHook() will only be called if configUSE_IDLE_HOOK is set
+  to 1 in FreeRTOSConfig.h. It will be called on each iteration of the idle
+  task. It is essential that code added to this hook function never attempts
+  to block in any way (for example, call xQueueReceive() with a block time
+  specified, or call vTaskDelay()). If the application makes use of the
+  vTaskDelete() API function (as this demo application does) then it is also
+  important that vApplicationIdleHook() is permitted to return to its calling
+  function, because it is the responsibility of the idle task to clean up
+  memory allocated by the kernel to any task that has since been deleted. */
 }
 /* USER CODE END 2 */
 
 /**
-  * @brief  FreeRTOS initialization
-  * @param  None
-  * @retval None
-  */
-void MX_FREERTOS_Init(void) {
+ * @brief  FreeRTOS initialization
+ * @param  None
+ * @retval None
+ */
+void MX_FREERTOS_Init(void)
+{
   /* USER CODE BEGIN Init */
 
   /* USER CODE END Init */
 
   /* USER CODE BEGIN RTOS_MUTEX */
-	/* add mutexes, ... */
+  /* add mutexes, ... */
   /* USER CODE END RTOS_MUTEX */
 
   /* USER CODE BEGIN RTOS_SEMAPHORES */
-	/* add semaphores, ... */
+  /* add semaphores, ... */
   /* USER CODE END RTOS_SEMAPHORES */
 
   /* USER CODE BEGIN RTOS_TIMERS */
-	/* start timers, add new ones, ... */
+  /* start timers, add new ones, ... */
   /* USER CODE END RTOS_TIMERS */
 
   /* USER CODE BEGIN RTOS_QUEUES */
-	/* add queues, ... */
+  /* add queues, ... */
   /* USER CODE END RTOS_QUEUES */
 
   /* Create the thread(s) */
@@ -231,13 +231,12 @@ void MX_FREERTOS_Init(void) {
   UI_RefreshHandle = osThreadNew(UI_Refresh_callback, NULL, &UI_Refresh_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
-	/* add threads, ... */
+  /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
 
   /* USER CODE BEGIN RTOS_EVENTS */
-	/* add events, ... */
+  /* add events, ... */
   /* USER CODE END RTOS_EVENTS */
-
 }
 
 /* USER CODE BEGIN Header_Flash_LED_Task_callback */
@@ -252,16 +251,16 @@ void Flash_LED_Task_callback(void *argument)
   /* init code for USB_DEVICE */
   MX_USB_DEVICE_Init();
   /* USER CODE BEGIN Flash_LED_Task_callback */
-	/* Infinite loop */
-	for (;;)
-	{	
-		led_show(GREEN);		
-		osDelay(500);		
-		led_show(RED);		
-		osDelay(500);		
-		led_show(BLUE);		
-		osDelay(500);		
-	}
+  /* Infinite loop */
+  for (;;)
+  {
+    led_show(GREEN);
+    osDelay(500);
+    led_show(RED);
+    osDelay(500);
+    led_show(BLUE);
+    osDelay(500);
+  }
   /* USER CODE END Flash_LED_Task_callback */
 }
 
@@ -275,23 +274,23 @@ void Flash_LED_Task_callback(void *argument)
 void CAN_sendTask_callback(void *argument)
 {
   /* USER CODE BEGIN CAN_sendTask_callback */
-	MX_WWDG_Init(); // 窗口看门狗
-	/* Infinite loop */
-	for (;;)
-	{
-		if(Global.mode == LOCK)
-		{
-		CAN1_send_ZERO_current();
-		CAN2_send_ZER0_current(); 
-		}// 发送电机控制电流		}
-		else
-		{
-		CAN1_send_current();
-		CAN2_send_current();
-		}
-		osDelay(5);
-		HAL_WWDG_Refresh(&hwwdg);
-	}
+  MX_WWDG_Init(); // 窗口看门狗
+  /* Infinite loop */
+  for (;;)
+  {
+    if (Global.mode == LOCK)
+    {
+      CAN1_send_ZERO_current();
+      CAN2_send_ZER0_current();
+    } // 发送电机控制电流		}
+    else
+    {
+      CAN1_send_current();
+      CAN2_send_current();
+    }
+    osDelay(5);
+    HAL_WWDG_Refresh(&hwwdg);
+  }
   /* USER CODE END CAN_sendTask_callback */
 }
 
@@ -305,13 +304,13 @@ void CAN_sendTask_callback(void *argument)
 void RemoteTask_callback(void *argument)
 {
   /* USER CODE BEGIN RemoteTask_callback */
-	/* Infinite loop */
-	for (;;)
-	{
-		remote_control_task();
-    
-		osDelay(1);
-	}
+  /* Infinite loop */
+  for (;;)
+  {
+    remote_control_task();
+
+    osDelay(1);
+  }
   /* USER CODE END RemoteTask_callback */
 }
 
@@ -326,16 +325,16 @@ void ChassisTask_callback(void *argument)
 {
   /* USER CODE BEGIN ChassisTask_callback */
 
-	/* Infinite loop */
-	for (;;)
-	{
-		chassis_moto_speed_current_calc();
-	  if(Global.mode == FLOW)
-		chassis_Flow_mode();
-		else if(Global.mode == SPIN)
-		chassis_Spin_mode();
-		osDelay(5);
-	}
+  /* Infinite loop */
+  for (;;)
+  {
+    chassis_moto_speed_current_calc();
+    if (Global.mode == FLOW)
+      chassis_Flow_mode();
+    else if (Global.mode == SPIN)
+      chassis_Spin_mode();
+    osDelay(5);
+  }
   /* USER CODE END ChassisTask_callback */
 }
 
@@ -349,19 +348,19 @@ void ChassisTask_callback(void *argument)
 void GimbalTask_callback(void *argument)
 {
   /* USER CODE BEGIN GimbalTask_callback */
-	/* Infinite loop */
+  /* Infinite loop */
 
-	for (;;)
-	{
-		/* 云台控制 */
-		gimbal_updata();
-		gimbal_pid_cal();
-		/* 发射机构控制 */
-		shoot_pid_cal();		
-		shoot_update();
-		shoot_speed_limit();
-		osDelay(1);
-	}
+  for (;;)
+  {
+    /* 云台控制 */
+    gimbal_updata();
+    gimbal_pid_cal();
+    /* 发射机构控制 */
+    shoot_pid_cal();
+    shoot_update();
+    shoot_speed_limit();
+    osDelay(1);
+  }
   /* USER CODE END GimbalTask_callback */
 }
 
@@ -375,12 +374,12 @@ void GimbalTask_callback(void *argument)
 void ErrorDetectTask_callback(void *argument)
 {
   /* USER CODE BEGIN ErrorDetectTask_callback */
-	/* Infinite loop */
-	for (;;)
-	{
-		Error_detect_flush();
-		osDelay(100);
-	}
+  /* Infinite loop */
+  for (;;)
+  {
+    Error_detect_flush();
+    osDelay(100);
+  }
   /* USER CODE END ErrorDetectTask_callback */
 }
 
@@ -395,46 +394,47 @@ void RefereeTask_callback(void *argument)
 {
   /* USER CODE BEGIN RefereeTask_callback */
 
-	/* Infinite loop */
-	for (;;)
-	{
-		referee_usart_task();
-		Required_Data();
-		Cap_Required_Data();
-		cap_update();
-		
-		osDelay(10);
-	}
+  /* Infinite loop */
+  for (;;)
+  {
+    referee_usart_task();
+    Required_Data();
+    Cap_Required_Data();
+    cap_update();
+
+    osDelay(10);
+  }
   /* USER CODE END RefereeTask_callback */
 }
 
 /* USER CODE BEGIN Header_UI_Refresh_callback */
 /**
-* @brief Function implementing the UI_Refresh thread.
-* @param argument: Not used
-* @retval None
-*/
+ * @brief Function implementing the UI_Refresh thread.
+ * @param argument: Not used
+ * @retval None
+ */
 /* USER CODE END Header_UI_Refresh_callback */
 void UI_Refresh_callback(void *argument)
 {
   /* USER CODE BEGIN UI_Refresh_callback */
   /* Infinite loop */
-  for(;;)
+  for (;;)
   {
-      if(Global.input.ui_init==1){
-        ui_init();
-        Global.input.ui_init=0;
-      }
-      ui_supercap(cap.remain_vol);
-      char_change();
-      ui_chassis(relative_angle);
-      ui_auto(fromNUC.shoot);
-      ui_chassisline();
-			ui_WarningLight();
-			ui_Spin();
+    if (Global.input.ui_init == 1)
+    {
+      ui_init();
+      Global.input.ui_init = 0;
+    }
+    ui_supercap(cap.remain_vol);
+    char_change();
+    ui_chassis(relative_angle);
+    ui_auto(fromNUC.shoot);
+    ui_chassisline();
+    ui_WarningLight();
+    ui_Spin();
 
-      osDelay(1);
-      ui_updata();
+    osDelay(1);
+    ui_updata();
   }
   /* USER CODE END UI_Refresh_callback */
 }
@@ -442,7 +442,4 @@ void UI_Refresh_callback(void *argument)
 /* Private application code --------------------------------------------------*/
 /* USER CODE BEGIN Application */
 
-
-
 /* USER CODE END Application */
-

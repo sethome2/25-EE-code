@@ -140,8 +140,6 @@ void Remote_Control_RC()
 		cover_close();
 }
 
-
-
 /******************************PC²Ù×÷Âß¼­**************************************************/
 void Remote_Control_PC()
 {
@@ -340,7 +338,7 @@ void Remote_Control_PC()
 	else
 		Global.input.x = 0;
 
-	if (IF_KEY_PRESSED_V) //±£Áô
+	if (IF_KEY_PRESSED_V) // ±£Áô
 	{
 	}
 
@@ -409,10 +407,14 @@ void Remote_Control_PC()
 	}
 }
 
-void remote_control_task(){
+void remote_control_task()
+{
 	Remote_Control();
-	if(Global.input.ctl==PC)
+	if (Global.input.ctl == PC)
 		Remote_Control_PC();
-	else if(Global.input.ctl==RC)
+	else if (Global.input.ctl == RC)
 		Remote_Control_RC();
+	else
+	{
+	}
 }
